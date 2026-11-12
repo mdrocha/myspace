@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2391FF">
+  <title>Firefly — ideias em movimento</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="left-rail">
+      <a class="brand" href="#" data-page="home" aria-label="Firefly">
+        <span class="brand-symbol">f</span><span>firefly</span>
+      </a>
+      <nav class="primary-nav" aria-label="Navegação principal">
+        <button class="nav-link selected" data-page="home"><span class="nav-ico">⌂</span><span>Início</span></button>
+        <button class="nav-link" data-page="explore"><span class="nav-ico">⌕</span><span>Explorar</span></button>
+        <button class="nav-link" data-page="notifications"><span class="nav-ico">♧</span><span>Notificações</span><i class="nav-badge"></i></button>
+        <button class="nav-link" data-page="messages"><span class="nav-ico">✉</span><span>Mensagens</span></button>
+        <button class="nav-link" data-page="communities"><span class="nav-ico">▦</span><span>Comunidades</span></button>
+        <button class="nav-link" data-page="bookmarks"><span class="nav-ico">▤</span><span>Itens salvos</span></button>
+        <button class="nav-link" data-page="profile"><span class="nav-ico">♙</span><span>Perfil</span></button>
+      </nav>
+      <button class="primary-button sidebar-post" id="sidebarPost">Publicar</button>
+      <div class="rail-bottom">
+        <button class="nav-link" data-page="more"><span class="nav-ico">···</span><span>Mais opções</span></button>
+        <button class="profile-switch">
+          <span class="avatar avatar-me">MD</span>
+          <span class="profile-switch-copy"><b>Michel Douglas</b><small>@micheldouglas</small></span>
+          <span class="switch-dots">···</span>
+        </button>
+      </div>
+    </aside>
+
+    <main class="main-column">
+      <header class="mobile-header">
+        <span class="brand-symbol">f</span><b>firefly</b>
+        <button class="round-icon" aria-label="Perfil">MD</button>
+      </header>
+
+      <section class="page-view active" id="page-home">
+        <header class="column-header sticky-header">
+          <div><h1>Início</h1><p>O que está acontecendo agora</p></div>
+          <button class="round-icon subtle" aria-label="Preferências do feed">☷</button>
+        </header>
+        <div class="timeline-tabs">
+          <button class="timeline-tab active" data-timeline="for-you">Para você</button>
+          <button class="timeline-tab" data-timeline="following">Seguindo</button>
+        </div>
+        <section class="composer" id="composer">
+          <div class="avatar avatar-me">MD</div>
+          <div class="composer-main">
+            <textarea id="postText" maxlength="280" placeholder="O que está acontecendo?"></textarea>
+            <div class="composer-meta">
+              <div class="composer-tools">
+                <button title="Imagem">▧</button><button title="GIF">GIF</button><button title="Enquete">☷</button><button title="Emoji">☺</button>
+              </div>
+              <div class="composer-submit"><span id="charCount">0/280</span><button class="primary-button publish-button" id="publishButton" disabled>Publicar</button></div>
+            </div>
+          </div>
+        </section>
+        <div class="feed" id="feed">
+          <article class="post">
+            <div class="avatar avatar-lilac">LA</div>
+            <div class="post-content">
+              <div class="post-author"><b>Larissa Alves</b><span class="verified">✓</span><span class="muted">@larissa.alves · 12 min</span><button class="post-menu">···</button></div>
+              <p>Às vezes, a melhor parte de uma ideia é simplesmente começar. O resto a gente constrói no caminho.</p>
+              <div class="post-actions"><button class="post-action"><span>♡</span><small>8</small></button><button class="post-action repost"><span>⇄</span><small>3</small></button><button class="post-action like"><span>♡</span><small class="count">24</small></button><button class="post-action"><span>↗</span></button></div>
+            </div>
+          </article>
+          <article class="post">
+            <div class="avatar avatar-green">RC</div>
+            <div class="post-content">
+              <div class="post-author"><b>Rafael Costa</b><span class="muted">@rafa.costa · 38 min</span><button class="post-menu">···</button></div>
+              <p>Uma cidade muda quando as pessoas começam a olhar para os mesmos problemas de um jeito diferente.</p>
+              <div class="post-actions"><button class="post-action"><span>♡</span><small>4</small></button><button class="post-action repost"><span>⇄</span><small>12</small></button><button class="post-action like"><span>♡</span><small class="count">67</small></button><button class="post-action"><span>↗</span></button></div>
+            </div>
+          </article>
+          <article class="post">
+            <div class="avatar avatar-amber">BM</div>
+            <div class="post-content">
+              <div class="post-author"><b>Beatriz Martins</b><span class="verified">✓</span><span class="muted">@bia.martins · 1 h</span><button class="post-menu">···</button></div>
+              <p>Pequeno lembrete: você não precisa transformar todo interesse em produtividade. Algumas coisas podem existir só porque você gosta delas.</p>
+              <div class="post-actions"><button class="post-action"><span>♡</span><small>19</small></button><button class="post-action repost"><span>⇄</span><small>7</small></button><button class="post-action like"><span>♡</span><small class="count">103</small></button><button class="post-action"><span>↗</span></button></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-view" id="page-communities">
+        <header class="column-header community-header">
+          <div><h1>Comunidades</h1><p>Encontre pessoas que compartilham seus interesses.</p></div>
+          <button class="primary-button create-community" id="createCommunity">Criar comunidade</button>
+        </header>
+        <div class="community-toolbar">
+          <label class="community-search"><span>⌕</span><input id="communitySearch" placeholder="Buscar comunidades"></label>
+          <div class="community-categories">
+            <button class="category-chip active" data-category="Todas">Todas</button>
+            <button class="category-chip" data-category="Tecnologia">Tecnologia</button>
+            <button class="category-chip" data-category="Games">Games</button>
+            <button class="category-chip" data-category="Cultura">Cultura</button>
+            <button class="category-chip" data-category="Cotidiano">Cotidiano</button>
+          </div>
+        </div>
+        <div class="community-feature">
+          <div class="feature-copy"><span class="eyebrow">SEU ESPAÇO, SUA CONVERSA</span><h2>Ideias crescem<br>em comunidade.</h2><p>Crie tópicos, participe de discussões e encontre novas perspectivas.</p></div>
+          <div class="feature-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit-core">f</div><span class="bubble bubble-one">+</span><span class="bubble bubble-two">•••</span><span class="bubble bubble-three">↗</span></div>
+        </div>
+        <div class="section-heading"><div><h2>Comunidades em destaque</h2><p>Espaços ativos para começar a participar</p></div><button class="text-button" id="allCommunities">Ver todas</button></div>
+        <div class="community-grid" id="communityGrid">
+          <article class="community-card" data-category="Tecnologia" data-name="Tecnologia sem filtro"><div class="community-cover cover-tech"><span>⌘</span></div><div class="community-card-body"><div class="community-icon icon-tech">⌘</div><h3>Tecnologia sem filtro</h3><p>Debates sobre tecnologia, programação, inovação e o futuro digital.</p><div class="community-stats"><span>● 8,4 mil membros</span><span>42 tópicos</span></div><button class="join-button">Participar</button></div></article>
+          <article class="community-card" data-category="Games" data-name="Clube dos jogadores"><div class="community-cover cover-games"><span>◈</span></div><div class="community-card-body"><div class="community-icon icon-games">◈</div><h3>Clube dos jogadores</h3><p>Jogos, lançamentos, recomendações e conversas sem fim.</p><div class="community-stats"><span>● 5,2 mil membros</span><span>31 tópicos</span></div><button class="join-button">Participar</button></div></article>
+          <article class="community-card" data-category="Cultura" data-name="Cinema e cultura"><div class="community-cover cover-culture"><span>▣</span></div><div class="community-card-body"><div class="community-icon icon-culture">▣</div><h3>Cinema e cultura</h3><p>Filmes, séries, livros, música e tudo que vale uma boa conversa.</p><div class="community-stats"><span>● 3,7 mil membros</span><span>26 tópicos</span></div><button class="join-button">Participar</button></div></article>
+          <article class="community-card" data-category="Cotidiano" data-name="Papo de todo dia"><div class="community-cover cover-life"><span>✳</span></div><div class="community-card-body"><div class="community-icon icon-life">✳</div><h3>Papo de todo dia</h3><p>Assuntos cotidianos, experiências, perguntas e opiniões.</p><div class="community-stats"><span>● 2,9 mil membros</span><span>18 tópicos</span></div><button class="join-button">Participar</button></div></article>
+        </div>
+      </section>
+
+      <section class="page-view" id="page-community-detail">
+        <button class="back-link" id="backCommunities">← Comunidades</button>
+        <div class="detail-cover cover-tech" id="detailCover"><span id="detailCoverSymbol">⌘</span></div>
+        <div class="detail-top"><div><span class="eyebrow">COMUNIDADE PÚBLICA</span><h1 id="detailName">Tecnologia sem filtro</h1><p id="detailDescription">Debates sobre tecnologia, programação, inovação e o futuro digital.</p><span class="muted" id="detailStats">8,4 mil membros · 42 tópicos</span></div><button class="primary-button" id="detailJoin">Participar</button></div>
+        <div class="community-tabs"><button class="active">Discussões</button><button>Sobre</button><button>Membros</button></div>
+        <div class="topic-composer"><input id="topicTitle" placeholder="Título da discussão"><textarea id="topicBody" placeholder="Comece uma conversa com a comunidade..."></textarea><div><span>Compartilhe uma ideia ou pergunta com os membros.</span><button class="primary-button" id="createTopic">Publicar tópico</button></div></div>
+        <div class="topic-list" id="topicList">
+          <article class="topic"><div class="topic-avatar">JP</div><div><b>Qual linguagem vale mais a pena aprender em 2026?</b><p>Estou começando na programação e queria ouvir experiências de quem já trabalha na área.</p><small>João Pedro · 2 horas · 18 respostas</small></div></article>
+          <article class="topic"><div class="topic-avatar">MS</div><div><b>O que vocês acham da evolução das IAs?</b><p>Quais ferramentas realmente mudaram o fluxo de trabalho de vocês?</p><small>Marina Souza · 5 horas · 32 respostas</small></div></article>
+        </div>
+      </section>
+
+      <section class="page-view placeholder-page" id="page-explore"><h1>Explorar</h1><p>Descubra assuntos, perfis e comunidades.</p></section>
+      <section class="page-view placeholder-page" id="page-notifications"><h1>Notificações</h1><p>Suas atualizações aparecerão aqui.</p></section>
+      <section class="page-view placeholder-page" id="page-messages"><h1>Mensagens</h1><p>Suas conversas privadas aparecerão aqui.</p></section>
+      <section class="page-view placeholder-page" id="page-bookmarks"><h1>Itens salvos</h1><p>Guarde publicações para consultar depois.</p></section>
+      <section class="page-view placeholder-page" id="page-profile"><h1>Michel Douglas</h1><p>@micheldouglas</p><div class="profile-placeholder"><div class="avatar avatar-me">MD</div><b>Michel Douglas</b><span>Entrou no Firefly recentemente</span></div></section>
+      <section class="page-view placeholder-page" id="page-more"><h1>Mais opções</h1><p>Configurações e outras ferramentas.</p></section>
+    </main>
+
+    <aside class="right-column">
+      <label class="global-search"><span>⌕</span><input placeholder="Buscar no Firefly"></label>
+      <section class="widget-card"><div class="widget-heading"><h2>Assuntos em alta</h2><button>···</button></div><div class="trend-item"><small>Tecnologia · Em alta</small><b>Inteligência Artificial</b><span>1.208 publicações</span></div><div class="trend-item"><small>Brasil · Conversas populares</small><b>#Tecnologia</b><span>856 publicações</span></div><div class="trend-item"><small>Cultura · Em alta</small><b>Cinema nacional</b><span>542 publicações</span></div><button class="widget-more">Mostrar mais</button></section>
+      <section class="widget-card"><div class="widget-heading"><h2>Talvez você goste</h2><button>···</button></div><div class="mini-community"><div class="mini-icon mini-blue">⌘</div><div><b>Tecnologia sem filtro</b><small>8,4 mil membros</small></div><button class="mini-join">+</button></div><div class="mini-community"><div class="mini-icon mini-purple">◈</div><div><b>Clube dos jogadores</b><small>5,2 mil membros</small></div><button class="mini-join">+</button></div><button class="widget-more" data-go="communities">Explorar comunidades</button></section>
+      <footer class="legal-links">Termos de Serviço · Privacidade · Política de conteúdo<br>Sobre · Acessibilidade<br><br>© 2026 Firefly</footer>
+    </aside>
+  </div>
+
+  <nav class="mobile-nav"><button data-page="home" class="selected">⌂<small>Início</small></button><button data-page="explore">⌕<small>Explorar</small></button><button data-page="communities">▦<small>Comunidades</small></button><button data-page="notifications">♧<small>Alertas</small></button><button data-page="profile">♙<small>Perfil</small></button></nav>
+  <div class="toast" id="toast"></div>
+  <div class="modal-backdrop" id="communityModal"><div class="modal"><button class="modal-close" id="closeModal">×</button><span class="eyebrow">NOVO ESPAÇO</span><h2>Criar comunidade</h2><p>Reúna pessoas em torno de um assunto.</p><label>Nome da comunidade<input id="newCommunityName" maxlength="45" placeholder="Ex.: Fotografia independente"></label><label>Descrição<textarea id="newCommunityDescription" maxlength="160" placeholder="Sobre o que será essa comunidade?"></textarea></label><label>Categoria<select id="newCommunityCategory"><option>Tecnologia</option><option>Games</option><option>Cultura</option><option>Cotidiano</option></select></label><button class="primary-button modal-submit" id="saveCommunity">Criar comunidade</button></div></div>
+  <script src="js/script.js"></script>
+</body>
+</html>
